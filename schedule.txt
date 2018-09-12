@@ -1,0 +1,45 @@
+Wk Day Date     Event      Prac  Purpose
+1  Tue 18 Sep   Lecture          1. programs made of equations; running them   
+   Fri 21 Sep   Lecture          2. defining functions (H4)
+2  Thu 27 Sep   Deadline   1     4pm
+   Thu 27 Sep   Tutorial   2     T1. Prac2 unveil
+   Fri 28 Sep   Lecture          3. list comprehensions (H5)
+3  Mon  1 Oct   Lab        2
+   Tue  2 Oct   Lecture          4. recursive functions (H6)
+   Thu  4 Oct   Tutorial   2     T2. Prac2 firefight
+   Fri  5 Oct   Lecture          5. higher-order functions (H7)
+4  Mon  8 Oct   Lab        2
+   Tue  9 Oct   Lecture          6. declaring types and classes (H8)
+   Thu 11 Oct   Tutorial   3     T3. Prac3 unveil
+   Fri 12 Oct   Lecture          7. QuickCheck
+5  Mon 15 Oct   Deadline   2     2pm
+                Lab-Test   2
+   Tue 16 Oct   Lecture          8. recursion schemes
+   Thu 18 Oct   Tutorial   2     T4. Prac2 autopsy
+   Fri 19 Oct   Lecture          9. functors and containers
+6  Mon 22 Oct   Lab        3
+   Tue 23 Oct   Lecture          10. building pure evaluators
+   Thu 25 Oct   Tutorial   3     T5. Prac3 firefight
+   Fri 26 Oct   Lecture          11. applicatives and monads (H12)
+7  Mon 29 Oct   Lab        3
+   Tue 30 Oct   Lecture          12. monads we like
+   Thu  1 Nov   Tutorial   4     T6. Prac4 unveil
+   Fri  2 Nov   Lecture          13. monadic parsing (H13)
+8  Mon  5 Nov   Deadline   3     2pm
+                Lab-Test   3     Prac3 test
+   Tue  6 Nov   Lecture          14. more monadic parsing
+   Thu  8 Nov   Tutorial   3     T7. Prac3 autopsy
+   Fri  9 Nov   Lecture          15. state and custom monads
+9  Mon 12 Nov   Lab        4
+   Tue 13 Nov   Lecture          16. visiting and traversing containers
+   Thu 15 Nov   Tutorial   4     T8. Prac4 firefight
+   Fri 16 Nov   Lecture          17. programming interaction
+10 Mon 19 Nov   Lab        4
+   Tue 20 Nov   Lecture          18. infinite data and processes (H15)
+   Thu 22 Nov   Tutorial   4     T9. Prac4 firefight
+   Fri 23 Nov   Lecture          19. parallelism
+11 Mon 26 Nov   Deadline   4     2pm
+                Lab-Test   4     Prac4 test
+   Tue 27 Nov   Lecture          20. concurrency             
+   Thu 29 Nov   Tutorial   4     T10. Prac4 autopsy
+   Fri 30 Nov   Lecture          21. a look at Agda (CS410 propaganda)
