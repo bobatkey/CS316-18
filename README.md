@@ -56,7 +56,7 @@ Students registered on the course can see their OMPs on the [Marx system](https:
 
 As mentioned above, this course is entirely assessed by coursework. The split between the four exercises is shown below:
 
-- Exercise 1 (5%) : [The evaluation game](https://personal.cis.strath.ac.uk/robert.atkey/terms.html). Once you have finished, enter your username and you will get a password. Email this to one of us (email addresses above) by the deadline (Thursday 27th September, 4pm).
+- Exercise 1 (5%) : [The evaluation game](https://personal.cis.strath.ac.uk/robert.atkey/terms.html). Once you have finished, enter your username and you will get a password. Email this to me (email address above) by the deadline (Thursday 27th September, 4pm).
 
 - Exercise 2 (30%) : This will be released on Thursday 27th September (week 2), and the final deadline and test are on Monday 15th October (week 5).
 
