@@ -50,7 +50,7 @@ In addition to the lectures, there are weekly tutorials at **4pm on Thursdays** 
 
 At every lecture and tutorial, we will hand out "One minute papers" (OMPs) for you to provide us with feedback on the lecture -- what you have learned in this lecture and what we could have explained better. At the start of the next lecture, we will go through the OMPs from last time and try to address the feedback you give us.
 
-Students registered on the course can see their OMPs on the [Marx system](https://personal.cis.strath.ac.uk/conor.mcbride/Marx/?page=CS316).
+Students registered on the course can see their OMPs on the [Marx system](https://personal.cis.strath.ac.uk/conor.mcbride/shib/Marx/?page=CS316).
 
 ## Coursework
 
