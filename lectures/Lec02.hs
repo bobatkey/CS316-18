@@ -179,8 +179,6 @@ not2 :: Bool -> Bool
 not2 True  = False
 not2 False = True
 
-
-
 {- Sometimes, defining a function by pattern matching is as simple as
    the 'not2' function. Unfortunately, we also have to think a bit
    sometimes. Happily, we can use the type information to gently guide
