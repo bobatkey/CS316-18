@@ -58,7 +58,7 @@ As mentioned above, this course is entirely assessed by coursework. The split be
 
 - Exercise 1 (5%) : [The evaluation game](https://personal.cis.strath.ac.uk/robert.atkey/terms.html). Once you have finished, enter your username and you will get a password. Email this to me (email address above) by the deadline (Thursday 27th September, 4pm).
 
-- Exercise 2 (30%) : [First Order Progrmming](exercises/Ex2.hs). This was released on Thursday 27th September (week 2), and the final deadline and test are on Monday 15th October (week 5).
+- Exercise 2 (30%) : [First Order Programming](exercises/Ex2.hs). This was released on Thursday 27th September (week 2), and the final deadline and test are on Monday 15th October (week 5).
 
 - Exercise 3 (30%) : This will be released on Thursday 11th October (week 4), and the final deadline and test are on Monday 5th November (week 8).
 
