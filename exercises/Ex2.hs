@@ -243,7 +243,7 @@ layOutLines w col line words = undefined
 
    HINT: the structure of the function is very similar to 'splitOn'
    above, except that the condition used to decide when to split into
-   groups is slightly different. -}
+   groups is different. -}
 
 {- Once you have written 'layOutParagraph', the following functions will
    start working, which call 'layOutParagraph' with the right initial
@@ -603,8 +603,8 @@ output b = undefined
    notGate, that reads its input and outputs it unaltered. You should
    have:
 
-     process wire [True]   =  [True]
-     process wire [False]  =  [False]
+     process copyCat [True]   =  [True]
+     process copyCat [False]  =  [False]
 -}
 
 copyCat :: Process
