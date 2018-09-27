@@ -1,5 +1,5 @@
 {-# OPTIONS_GHC -fwarn-incomplete-patterns #-} 
-module Ex2Solutions where
+module Ex2 where
 
 import Prelude hiding (words)
 
