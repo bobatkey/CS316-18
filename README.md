@@ -21,7 +21,7 @@ See the [schedule](schedule.txt) for more details.
 Most of the lectures will involve us doing live coding. We will place the code from each lecture in this repository after each lecture, interspersed with commentary covering what we talked about.
 
 - [Lecture 01](lectures/Lec01.hs) : Data and Pattern Matching
-- [Lecture 02](lectures/Lec03.hs) : Defining functions
+- [Lecture 02](lectures/Lec02.hs) : Defining functions
 - Lecture 03 : List comprehensions
 - Lecture 04 : Recursive functions
 - Lecture 05 : Higher-order functions
@@ -71,7 +71,7 @@ After each of the exercises has been marked, we will email you your marks, and a
 To clone a local copy of this git repository, execute
 
 ```
-git clone https://github.com/bobatkey/CS316-17/
+git clone https://github.com/bobatkey/CS316-18/
 ```
 
 ## Helpful Links
