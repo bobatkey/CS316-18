@@ -162,7 +162,7 @@ not1 x | x         = False
    and its arguments again in every line. -}
 
 
-{-    PART II : DEFINING FUNCTIONS BY PATTERN MATCHING
+{-    PART III : DEFINING FUNCTIONS BY PATTERN MATCHING
 
    Guards and `if-then-else` allow us to define functions where we
    decide what the function does by using boolean logic to make the
@@ -179,7 +179,7 @@ not2 :: Bool -> Bool
 not2 True  = False
 not2 False = True
 
---   e.g., maybeApply, maybe?  (:info Maybe)
+
 
 {- Sometimes, defining a function by pattern matching is as simple as
    the 'not2' function. Unfortunately, we also have to think a bit
@@ -479,7 +479,7 @@ hd (x:xs) = Just x
 
 {- END OF ASIDE -}
 
-{-    PART III : DEFINING FUNCTIONS USING OTHER FUNCTIONS
+{-    PART IV : DEFINING FUNCTIONS USING OTHER FUNCTIONS
 
    We have seen how to define functions by using `if-then-else`s,
    guards, and pattern matching. Another way to define functions is
