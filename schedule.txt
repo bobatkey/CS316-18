@@ -33,9 +33,9 @@ Wk Day Date     Event      Prac  Purpose
 9  Mon 12 Nov   Lab        4
    Tue 13 Nov   Lecture          16. visiting and traversing containers
    Thu 15 Nov   Tutorial   4     T8. Prac4 firefight
-   Fri 16 Nov   Lecture          17. programming interaction
+   Fri 16 Nov   Lecture          17. infinite data and processes (H15)
 10 Mon 19 Nov   Lab        4
-   Tue 20 Nov   Lecture          18. infinite data and processes (H15)
+   Tue 20 Nov   Lecture          18. Previ.se Guest Lecture
    Thu 22 Nov   Tutorial   4     T9. Prac4 firefight
    Fri 23 Nov   Lecture          19. parallelism
 11 Mon 26 Nov   Deadline   4     2pm
