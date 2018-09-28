@@ -88,11 +88,11 @@ joinWith x xs = undefined
 {- 2.1.3 Splitting Lists. The function 'splitOn' splits a list at every
    occurence of some value. Examples:
 
-      splitOn 0 [1,2,0,3,0]   = [[1,2],[3]]
-      splitOn 0 [1,2,0,3,0,4] = [[1,2],[3],[4]]
-      splitOn 0 []            = [[]]
-      splitOn 0 [0]           = [[],[]]
-      splitOn 0 [0,0]         = [[],[],[]]
+      splitOn 0 [1,2,0,3,0]   == [[1,2],[3]]
+      splitOn 0 [1,2,0,3,0,4] == [[1,2],[3],[4]]
+      splitOn 0 []            == [[]]
+      splitOn 0 [0]           == [[],[]]
+      splitOn 0 [0,0]         == [[],[],[]]
 
    Because strings are lists of 'Char's, 'splitOn' is a useful way of
    breaking down strings:
@@ -129,9 +129,9 @@ splitOnHelper s group xs = undefined
    that takes a list of lists, and returns a list only containing the
    non-empty elements in the same order. Examples:
 
-      removeEmpty [[1],[],[2]]         = [[1],[2]]
-      removeEmpty [[],[]]              = []
-      removeEmpty ["hello","","world"] = ["hello","world"] -}
+      removeEmpty [[1],[],[2]]         == [[1],[2]]
+      removeEmpty [[],[]]              == []
+      removeEmpty ["hello","","world"] == ["hello","world"] -}
 
 removeEmpty :: [[a]] -> [[a]]
 removeEmpty = undefined
@@ -142,11 +142,11 @@ removeEmpty = undefined
    a function that splits a string into words. Assume that words are
    separated by spaces ' ' and that words are not empty. Examples:
 
-      words "hello world" = ["hello","world"]
-      words "hello   world" = ["hello", "world"]
-      words ""              = []
-      words "   "           = []
-      words "hello, world"  = ["hello,", "world"] -}
+      words "hello world"   == ["hello","world"]
+      words "hello   world" == ["hello", "world"]
+      words ""              == []
+      words "   "           == []
+      words "hello, world"  == ["hello,", "world"] -}
 
 words :: String -> [String]
 words = undefined
@@ -243,7 +243,7 @@ layOutLines w col line words = undefined
 
    HINT: the structure of the function is very similar to 'splitOn'
    above, except that the condition used to decide when to split into
-   groups is different. -}
+   groups is slightly different. -}
 
 {- Once you have written 'layOutParagraph', the following functions will
    start working, which call 'layOutParagraph' with the right initial
@@ -252,15 +252,16 @@ layOutLines w col line words = undefined
       'formatParagraph 80 kidnapped' should return:
 
     [["I","will","begin","the","story","of","my","adventures","with","a","certain","morning","early","in","the"],
-     ["month","of","June,","the","year","of","grace","1751,","when","I","took","the","key","for","the","last","time"],
-     ["out","of","the","door","of","my","father's","house."]]
+     ["month","of","June,","the","year","of","grace","1751,","when","I","took","the","key","for","the","last","time","out"],
+     ["of","the","door","of","my","father's","house."]]
 
       'printParagraph 80 kidnapped' should print out:
 
       λ> printParagraph 80 kidnapped
       I will begin the story of my adventures with a certain morning early in the
-      month of June, the year of grace 1751, when I took the key for the last time
-      out of the door of my father's house. -}
+      month of June, the year of grace 1751, when I took the key for the last time out
+      of the door of my father's house.
+-}
 
 formatParagraph :: Int -> [String] -> [[String]]
 formatParagraph w = layOutLines w 0 []
@@ -330,9 +331,9 @@ data Cursor a
       Within "" 'h' "ello"  repersents [h]ello
 
    The function 'displayCursor' gives an ASCII art rendering of a
-   cursor over c. Try it out in GHCi to see how it represents different
-   cursor positions, and to get yourself familiar with the cursor
-   representation. -}
+   cursor over characters. Try it out in GHCi to see how it
+   represents different cursor positions, and to get yourself
+   familiar with the cursor representation. -}
 
 displayCursor :: Cursor Char -> String
 displayCursor (AtEnd before)              = oddAppend before "[_]"
@@ -410,7 +411,7 @@ moveRight (Within before point (a:after)) = Within (point:before) a after
    A helpful thing to remember is that moveLeft (like moveRight)
    should not alter the content of the cursor in any way. More
    formally, for all cursors 'c', 'fromCursor c == fromCursor
-   (moveleft c)'. -}
+   (moveLeft c)'. -}
 
 moveLeft :: Cursor a -> Cursor a
 moveLeft cursor = undefined
@@ -590,7 +591,7 @@ testNotF = process notGate [False]
    value and returns a process that outputs that bit and ends. You
    should have:
 
-      process (output True) [] = [True]
+      process (output True) [] == [True]
 
    and correspondingly for False. -}
 
@@ -603,8 +604,8 @@ output b = undefined
    notGate, that reads its input and outputs it unaltered. You should
    have:
 
-     process copyCat [True]   =  [True]
-     process copyCat [False]  =  [False]
+     process copyCat [True]   ==  [True]
+     process copyCat [False]  ==  [False]
 -}
 
 copyCat :: Process
@@ -674,10 +675,10 @@ sequ p q = undefined
 
 {- To check that you've got it right, make sure that
 
-   process (sequ notGate notGate) [True,True]   = [False,False]
-   process (sequ notGate notGate) [True,False]  = [False,True]
-   process (sequ notGate notGate) [False,True]  = [True,False]
-   process (sequ notGate notGate) [False,False] = [True,True]
+   process (sequ notGate notGate) [True,True]   == [False,False]
+   process (sequ notGate notGate) [True,False]  == [False,True]
+   process (sequ notGate notGate) [False,True]  == [True,False]
+   process (sequ notGate notGate) [False,False] == [True,True]
 
    That is, sequencing two notGate components gives you a process
    which negates two inputs. -}
