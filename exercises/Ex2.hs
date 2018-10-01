@@ -69,6 +69,8 @@ oddAppendSpec = undefined
    list of lists 'xs' and concatenates the lists with 'x' placed between
    each list. Examples:
 
+    joinWith 0 [[],[]]       == [0]
+    joinWith 0 [[],[],[]]    == [0,0]
     joinWith 0 [[1,2],[3,4]] == [1,2,0,3,4]
     joinWith False [[True,True],[True],[True]] == [True,True,False,True,False,True]
 
@@ -88,7 +90,7 @@ joinWith x xs = undefined
 {- 2.1.3 Splitting Lists. The function 'splitOn' splits a list at every
    occurence of some value. Examples:
 
-      splitOn 0 [1,2,0,3,0]   == [[1,2],[3]]
+      splitOn 0 [1,2,0,3,0]   == [[1,2],[3],[]]
       splitOn 0 [1,2,0,3,0,4] == [[1,2],[3],[4]]
       splitOn 0 []            == [[]]
       splitOn 0 [0]           == [[],[]]
