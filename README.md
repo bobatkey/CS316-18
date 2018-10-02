@@ -46,6 +46,8 @@ Most of the lectures will involve us doing live coding. We will place the code f
 
 In addition to the lectures, there are weekly tutorials at **4pm on Thursdays** in [LT210](http://www.learningservices.strath.ac.uk/avfacilities/roomresults.asp?&menu1=Graham%20Hills&roomField=GH816&findRoom=Show+room+details). These are intended for going through some unassessed homework questions that we will set after the lectures, or for you to ask questions about the assessed exercises.
 
+- [Tutorial 02](tutorials/Tut02.hs) : Some questions for the tutorial on Thursday 4th October.
+
 ### One minute papers
 
 At every lecture and tutorial, we will hand out "One minute papers" (OMPs) for you to provide us with feedback on the lecture -- what you have learned in this lecture and what we could have explained better. At the start of the next lecture, we will go through the OMPs from last time and try to address the feedback you give us.
