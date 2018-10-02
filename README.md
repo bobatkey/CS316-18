@@ -36,8 +36,8 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - Lecture 14 : More Parser Combinators
 - Lecture 15 : Parsing expressions, and Writer and State Monads
 - Lecture 16 : Traversing Containers
-- Lecture 17 : Interaction
-- Lecture 18 : Infinite Data and Processes
+- Lecture 17 : Infinite Data and Processes
+- Lecture 18 : [Previ.se](https://previ.se/) Guest Lecture
 - Lecture 19 : Parallelism
 - Lecture 20 : Concurrency
 - Lecture 21 : A look at Agda (CS410 propaganda)
