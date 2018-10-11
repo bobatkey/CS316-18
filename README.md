@@ -62,7 +62,7 @@ As mentioned above, this course is entirely assessed by coursework. The split be
 
 - Exercise 2 (30%) : [First Order Programming](exercises/Ex2.hs). This was released on Thursday 27th September (week 2), and the final deadline and test are on Monday 15th October (week 5).
 
-- Exercise 3 (30%) : This will be released on Thursday 11th October (week 4), and the final deadline and test are on Monday 5th November (week 8).
+- Exercise 3 (30%) : [Higher Order Programming](exercises/Ex3.hs). This was released on Thursday 11th October (week 4), and the final deadline and test are on Monday 5th November (week 8).
 
 - Exercise 4 (35%) : This will be released on Thursday 1st November (week 7), and the final deadline and test are on Monday 26th November (week 11).
 
