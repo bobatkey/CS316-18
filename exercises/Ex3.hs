@@ -5,8 +5,7 @@ module Ex3 where
 import Control.Exception       (finally)
 import Data.ByteString.Builder (Builder, word32LE, word8, word16LE, hPutBuilder)
 import Data.Foldable           (fold)
-import Data.Monoid             ((<>))
-import Data.Semigroup          (Semigroup)
+import Data.Semigroup          (Semigroup ((<>)))
 import Data.Word               (Word8, Word32)
 import System.IO               (openFile, IOMode (..), hClose)
 import Text.Read               (readMaybe)
@@ -585,6 +584,7 @@ instance Monoid RGBA where
    without the 'mempty'. Newer versions of GHC require that every
    Monoid is explicitly also a Semigroup. -}
 instance Semigroup RGBA where
+  (<>) = mappend
 
 
 {- The standard library defines '<>' as a synonym for 'mappend'. This
