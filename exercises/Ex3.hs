@@ -6,6 +6,7 @@ import Control.Exception       (finally)
 import Data.ByteString.Builder (Builder, word32LE, word8, word16LE, hPutBuilder)
 import Data.Foldable           (fold)
 import Data.Monoid             ((<>))
+import Data.Semigroup          (Semigroup)
 import Data.Word               (Word8, Word32)
 import System.IO               (openFile, IOMode (..), hClose)
 import Text.Read               (readMaybe)
@@ -579,6 +580,12 @@ instance Monoid RGBA where
       r = (a1*r1 + (1-a1)*a2*r2) / a
       g = (a1*g1 + (1-a1)*a2*g2) / a
       b = (a1*b1 + (1-a1)*a2*b2) / a
+
+{- This is needed for newer versions of GHC. A semigroup is a monoid
+   without the 'mempty'. Newer versions of GHC require that every
+   Monoid is explicitly also a Semigroup. -}
+instance Semigroup RGBA where
+
 
 {- The standard library defines '<>' as a synonym for 'mappend'. This
    means we can now write 'colour1 <> colour2' to blend colour1 and
