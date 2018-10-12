@@ -99,7 +99,7 @@ iterList f z (x:xs) = f x (iterList f z xs)
    Lecture 05 on higher-order functions and generating abstract
    versions of functions from concrete ones might be useful. -}
 
-sumList :: [Int] -> [Int]
+sumList :: [Int] -> Int
 sumList = undefined
 
 {- 2 MARKS -}
@@ -792,7 +792,6 @@ runIO (Output x k) = do { putStrLn x; runIO k }
         > runIO echo
         hello
         hello
-        Just ()
 
    where the first 'hello' is typed by the user, and the second is
    printed by the computer. You can use runIO to test your processes
