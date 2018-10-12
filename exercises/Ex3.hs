@@ -587,9 +587,19 @@ instance Semigroup RGBA where
   (<>) = mappend
 
 
-{- The standard library defines '<>' as a synonym for 'mappend'. This
-   means we can now write 'colour1 <> colour2' to blend colour1 and
-   colour2. -}
+{- This defines '<>' as a synonym for 'mappend'. This
+   means we can now write
+
+      colour1 <> colour2
+
+   to blend colour1 and colour2. For example blending 0.5 opacity red
+   into green:
+
+      > opacity 0.5 red <> green
+      MkRGBA {redChannel = 0.5, greenChannel = 0.5, blueChannel = 0.0, alphaChannel = 1.0}
+
+   yields a colour which is half green and half red, and is fully
+   opaque. -}
 
 
 
