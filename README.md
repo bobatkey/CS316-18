@@ -27,7 +27,7 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - [Lecture 05](lectures/Lec05.hs) : Higher-order functions
 - [Lecture 06](lectures/Lec06Live.hs) : Declaring types and classes
 - [Lecture 07](lectures/Lec07.hs) : QuickCheck
-- Lecture 08 : Recursion Schemes
+- [Lecture 08](lectures/Lec08.hs) : Recursion Schemes
 - Lecture 09 : Functors and Containers
 - Lecture 10 : Building Pure Evaluators
 - Lecture 11 : Monads and Applicatives
