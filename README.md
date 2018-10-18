@@ -28,8 +28,8 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - [Lecture 06](lectures/Lec06Live.hs) : Declaring types and classes
 - [Lecture 07](lectures/Lec07.hs) : QuickCheck
 - [Lecture 08](lectures/Lec08.hs) : Recursion Schemes
-- Lecture 09 : Functors and Containers
-- Lecture 10 : Building Pure Evaluators
+- [Lecture 09](lectures/Lec09.hs) : Functors and Containers
+- [Lecture 10](lectures/Lec10.hs) : Building Pure Evaluators
 - Lecture 11 : Monads and Applicatives
 - Lecture 12 : Monads we Like
 - Lecture 13 : Parser Combinators
