@@ -115,7 +115,7 @@ data Tree a
   deriving Show
 
 {- Here is the iterTree function that implements the recursion scheme
-   for trees that we'll see in Lecture 9. You will use this function
+   for trees that we'll see in Lecture 08. You will use this function
    below to implement other functions on trees. -}
 
 iterTree :: b -> (b -> a -> b -> b) -> Tree a -> b
