@@ -1,4 +1,4 @@
-module Lec11 where
+module Lec10 where
 
 {-    LECTURE 10 : BUILDING PURE EVALUATORS
 
