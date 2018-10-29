@@ -872,7 +872,7 @@ addInputs = undefined
 {- 2 MARKS -}
 
 
-{- 3.4.7 Using the 'sequ' function, define cpApply, which takes a process
+{- 3.4.7 Using the 'sequ' function, define procApply, which takes a process
    that returns a function, a process that returns a value and returns
    a process that returns the result of applying the function to the
    value. It ought to sequence the operations of the two processes so
