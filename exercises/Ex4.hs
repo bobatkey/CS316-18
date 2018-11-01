@@ -512,7 +512,8 @@ matchPatterns = undefined
    a 'Program' for the first rule that matches. That is, the names
    should match, and the patterns of the equation should match the
    list of values. On success, you should return the expression
-   associated with that rule.
+   associated with that rule and the environment built from doing the
+   pattern match.
 
    One way to write this function is to use the 'Alternative'
    typeclass functions 'empty' and '<|>' to represent failure to find
@@ -521,7 +522,7 @@ matchPatterns = undefined
    FIXME: some test cases.
 -}
 
-findRule :: String -> [Value] -> Program -> Env -> ErrorOr (Env, Exp)
+findRule :: String -> [Value] -> Program -> ErrorOr (Env, Exp)
 findRule = undefined
 
 {- 4 MARKS -}
@@ -547,7 +548,8 @@ newtype Eval a =
   MkEval (Program -> ErrorOr a)
 
 {- To 'run' some evaluation, we use the 'runEval' function that runs an
-   evaluation with a given program and environment: -}
+   evaluation with a given program and returns either an error or a
+   value: -}
 
 runEval :: Eval a -> Program -> ErrorOr a
 runEval (MkEval e) program = e program
@@ -648,9 +650,9 @@ evalProgram prog =
    of equations into proper 'Program's.
 
    You will build your parser using parser combinators, as introduced
-   in Lecture 14. Unlike in Lecture 14, we will write parsers that
-   produce error messages (see the 'Either' monad in Lecture 13),
-   rather than just returning 'Nothing' on failure. -}
+   in Lecture 13. Unlike in Lecture 13, we will write parsers that
+   produce error messages rather than just returning 'Nothing' on
+   failure. -}
 
 newtype Parser a = MkParser (String -> ErrorOr (a, String))
 
@@ -696,12 +698,12 @@ varname = undefined
 
 {- Here are some tests that your 'varname' parser should pass:
 
-     runParser varname "plus"  == Right ("plus", "")
-     runParser varname "x"     == Right ("x", "")
-     runParser varname "Plus"  == Left <error message>
-     runParser varname ""      == Left <error message>
-     runParser varname "plu s" == Right ("plu", " s")
-     runParser varname "123"   == Left <error message>
+     runParser varname "plus"  == OK ("plus", "")
+     runParser varname "x"     == OK ("x", "")
+     runParser varname "Plus"  == Error <error message>
+     runParser varname ""      == Error <error message>
+     runParser varname "plu s" == OK ("plu", " s")
+     runParser varname "123"   == Error <error message>
 
   Note that the tests do not specify what error messages look
   like. That is up to you. -}
@@ -720,13 +722,13 @@ constructorname = undefined
 
 {- Here are some tests that your 'constructorname' parser should pass:
 
-     runParser constructorname "plus"  == Left <error message>
-     runParser constructorname "x"     == Left <error message>
-     runParser constructorname ""      == Left <error message>
-     runParser constructorname "Plus"  == Right ("Plus", "")
-     runParser constructorname "S"     == Right ("S", "")
-     runParser constructorname "plu s" == Left <error message>
-     runParser constructorname "123"   == Left <error message> -}
+     runParser constructorname "plus"  == Error <error message>
+     runParser constructorname "x"     == Error <error message>
+     runParser constructorname ""      == Error <error message>
+     runParser constructorname "Plus"  == OK ("Plus", "")
+     runParser constructorname "S"     == OK ("S", "")
+     runParser constructorname "plu s" == Error <error message>
+     runParser constructorname "123"   == Error <error message> -}
 
 {- 1 MARK -}
 
@@ -962,9 +964,6 @@ scopeCheck prog = undefined
 
          $ Ex4 plus.ghoul
          (S (S (S (S Z))))
-
-   We will talk more about compiling Haskell programs to executables
-   in Lecture 18.
 
    You can also run the main function with a "faked" commandline
    argument from ghci directly, without compiling, by running
