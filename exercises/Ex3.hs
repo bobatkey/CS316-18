@@ -835,11 +835,9 @@ output = undefined
        > runIO (input `sequ` \x -> output x)
        hello
        hello
-       Just ()
 
        > runIO (input `sequ` \x -> End ())
        hello
-       Just ()
 
    Note that using the the backtick notation to write 'sequ' between
    its arguments allows us to read 'p1 `sequ` \x -> p2' as "do 'p1',
