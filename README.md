@@ -48,6 +48,8 @@ In addition to the lectures, there are weekly tutorials at **4pm on Thursdays** 
 
 - [Tutorial 02](tutorials/Tut02.md) : Some questions for the tutorial on Thursday 4th October.
 
+- [Tutorial 05](tutorials/Tut05.md) : Covered `iterList` (like `iterTree` in Exercise 3) and a short introduction to parser combinators.
+
 ### One minute papers
 
 At every lecture and tutorial, we will hand out "One minute papers" (OMPs) for you to provide us with feedback on the lecture -- what you have learned in this lecture and what we could have explained better. At the start of the next lecture, we will go through the OMPs from last time and try to address the feedback you give us.
@@ -64,7 +66,7 @@ As mentioned above, this course is entirely assessed by coursework. The split be
 
 - Exercise 3 (30%) : [Higher Order Programming](exercises/Ex3.hs). This was released on Thursday 11th October (week 4), and the final deadline and test are on Monday 5th November (week 8).
 
-- Exercise 4 (35%) : This will be released on Thursday 1st November (week 7), and the final deadline and test are on Monday 26th November (week 11).
+- Exercise 4 (35%) : [GHOUL](exercises/Ex4.hs). This was be released on Thursday 1st November (week 7), and the final deadline and test are on Monday 26th November (week 11).
 
 After each of the exercises has been marked, we will email you your marks, and also put them on the [Marx system](https://personal.cis.strath.ac.uk/conor.mcbride/shib/Marx/?page=CS316) for you to see.
 
