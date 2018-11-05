@@ -170,7 +170,7 @@ sequ_ p1 p2 = undefined
    'y's and one from 'y's to 'Maybe x's, and converts processes that
    communicate using 'x's into processes that communicate using
    'y's. If the translation fails (because the second function returns
-   'Nothing'), then the process should Abort by 'End'ing with Nothing. -}
+   'Nothing'), then the process should abort by 'End'ing with Nothing. -}
 
 translate :: (x -> y) -> (y -> Maybe x) -> Process x a -> Process y (Maybe a)
 translate xToy yTox p = undefined
