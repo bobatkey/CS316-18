@@ -2,6 +2,7 @@
 module Ex3Test where
 
 import Prelude hiding (words, lines, unlines)
+import Text.Read
 import Ex3
 
 {----------------------------------------------------------------------}
@@ -81,7 +82,7 @@ sortOnSndLength = undefined
 andBMP :: Bitmap Bool -> Bitmap Bool -> Bitmap Bool
 andBMP = undefined
 
-orBMP :: Bitmap Bool -> Bitmap Bool -> BitMap Bool
+orBMP :: Bitmap Bool -> Bitmap Bool -> Bitmap Bool
 orBMP = undefined
 
 notBMP :: Bitmap Bool -> Bitmap Bool
