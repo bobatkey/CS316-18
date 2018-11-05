@@ -121,9 +121,10 @@ data BProcess
   deriving Show
 
 {- Write a function that translates a 'BProcess' into a 'Process Bool
-   ()'. Whenever the Process ends, the 'CP' process should end;
-   whenever the 'Process' outputs, the 'CP' process should output; and
-   whenever the 'Process' inputs, the 'CP' process should input.
+   ()'. Whenever the 'BProcess' ends, the 'Process Bool' process should
+   end; whenever the 'BProcess' outputs, the 'Process Bool' process
+   should output; and whenever the 'BProcess' inputs, the 'Process
+   Bool' process should input.
 
    In the other direction, write a function that translates a 'Process
    Bool ()' to a 'BProcess'. -}
