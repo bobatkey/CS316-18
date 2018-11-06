@@ -32,8 +32,8 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - [Lecture 10](lectures/Lec10.hs) : Building Pure Evaluators
 - [Lecture 11](lectures/Lec11Live.hs) : (better notes pending) Monads and Applicatives
 - [Lecture 12](lectures/Lec12Live.hs) : (better notes pending) Monads we Like
-- Lecture 13 : Parser Combinators
-- Lecture 14 : More Parser Combinators
+- [Lecture 13](lectures/Lec13Live.hs) : Parser Combinators
+- [Lecture 14](lectures/Lec14Live.hs) : More Parser Combinators
 - Lecture 15 : Parsing expressions, and Writer and State Monads
 - Lecture 16 : Traversing Containers
 - Lecture 17 : Infinite Data and Processes
