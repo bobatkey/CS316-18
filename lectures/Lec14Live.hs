@@ -133,9 +133,12 @@ sequ (MkParser p1) f =
   MkParser (\s -> case p1 s of
                     Nothing -> Nothing
                     Just (rest, a) ->
+                      -- continue (f a) rest)
                       case f a of
                         MkParser p2 ->
                           p2 rest)
+
+-- continue (MkParser p2) rest = p2 rest
 
 expectAnAB :: Parser ()
 expectAnAB = do c <- char
@@ -143,14 +146,7 @@ expectAnAB = do c <- char
                 if c == 'A' && c' == 'B' then pure ()
                   else failure
 
-{-   char c  = getCharFromInput ();
-     char c' = getCharFromInput ();
-     if (c == 'A' && c' == 'B') {
-         return;
-     } else {
-         throw new ParseError();
-     }
--}
+
 
 
 {-
