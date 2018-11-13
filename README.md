@@ -35,7 +35,7 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - [Lecture 13](lectures/Lec13Live.hs) : Parser Combinators
 - [Lecture 14](lectures/Lec14Live.hs) : More Parser Combinators
 - [Lecture 15](lectures/Lec15Live.hs) : Parsing expressions and JSON
-- Lecture 16 : Traversing Containers
+- [Lecture 16](lectures/Lec16.hs) : Traversing Containers
 - Lecture 17 : Infinite Data and Processes
 - Lecture 18 : [Previ.se](https://previ.se/) Guest Lecture
 - Lecture 19 : Parallelism
