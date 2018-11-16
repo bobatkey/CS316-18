@@ -36,7 +36,7 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - [Lecture 14](lectures/Lec14Live.hs) : More Parser Combinators
 - [Lecture 15](lectures/Lec15Live.hs) : Parsing expressions and JSON
 - [Lecture 16](lectures/Lec16.hs) : Traversing Containers
-- Lecture 17 : Infinite Data and Processes
+- [Lecture 17](lectures/Lec17.hs) : Infinite Data and Processes
 - Lecture 18 : [Previ.se](https://previ.se/) Guest Lecture
 - Lecture 19 : Parallelism
 - Lecture 20 : Concurrency
@@ -48,7 +48,9 @@ In addition to the lectures, there are weekly tutorials at **4pm on Thursdays** 
 
 - [Tutorial 02](tutorials/Tut02.md) : Some questions for the tutorial on Thursday 4th October.
 
-- [Tutorial 05](tutorials/Tut05.md) : Covered `iterList` (like `iterTree` in Exercise 3) and a short introduction to parser combinators.
+- [Tutorial 05](tutorials/Tut05.md) : Covered `iterList` (like `iterTree` in Exercise 3) and a short introduction to parser combinators. [Haskell code](tutorials/Tut05Live.hs).
+
+- [Tutorial 08](tutorials/Tut08.hs) : State monad and counting change.
 
 ### One minute papers
 
