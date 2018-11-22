@@ -37,7 +37,7 @@ Most of the lectures will involve us doing live coding. We will place the code f
 - [Lecture 15](lectures/Lec15Live.hs) : Parsing expressions and JSON
 - [Lecture 16](lectures/Lec16.hs) : Traversing Containers
 - [Lecture 17](lectures/Lec17.hs) : Infinite Data and Processes
-- Lecture 18 : [Previ.se](https://previ.se/) Guest Lecture
+- Lecture 18 : [Previ.se](https://previ.se/) Guest Lecture (see MyPlace for the slides)
 - Lecture 19 : Parallelism
 - Lecture 20 : Concurrency
 - Lecture 21 : A look at Agda (CS410 propaganda)
