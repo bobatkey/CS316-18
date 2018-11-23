@@ -4,7 +4,7 @@ import System.Environment
 import Control.Parallel.Strategies
 import Debug.Trace
 
-{-    LECTURE 20 : Parallelism
+{-    LECTURE 19 : Parallelism
 
    This lecture is about running Haskell programs in parallel on
    multiple cores.
