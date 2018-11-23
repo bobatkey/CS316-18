@@ -1,0 +1,5 @@
+(plus Z y) -> y
+(plus (S x) y) -> (S (plus x y))
+(mult Z y) -> Z
+(mult (S x) y) -> (plus (mult x y) y)
+(main) -> (mult (S (S (S Z))) (S (S (S Z))))
