@@ -3,7 +3,7 @@ module Lec16 where
 import Prelude hiding (Traversable (..))
 import Data.Foldable
 
-{-   LECTURE 17 : VISITING AND TRAVERSING CONTAINERS
+{-   LECTURE 16 : VISITING AND TRAVERSING CONTAINERS
 
    Or : how do I write a 'foreach' loop in Haskell?
 
@@ -392,3 +392,8 @@ outputNumbers c =
 
 sequence :: (Applicative f, Traversable c) => c (f a) -> f (c a)
 sequence c = traverse id c
+
+myTasks = [ putStrLn "Task 1"
+          , do { line <- getLine; putStrLn ("You said " ++ line) }
+          , do { putStrLn "Task 3" }
+          ]
