@@ -70,6 +70,8 @@ As mentioned above, this course is entirely assessed by coursework. The split be
 
 - Exercise 4 (35%) : [GHOUL](exercises/Ex4.hs). This was be released on Thursday 1st November (week 7), and the final deadline and test are on Monday 26th November (week 11).
 
+    - See the example GHOUL programs [plus](exercises/plus.ghoul), [double](exercses/double.ghoul), and [multiply](exercises/multiply.ghoul).
+
 After each of the exercises has been marked, we will email you your marks, and also put them on the [Marx system](https://personal.cis.strath.ac.uk/conor.mcbride/shib/Marx/?page=CS316) for you to see.
 
 ### Git commands
