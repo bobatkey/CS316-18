@@ -15,7 +15,7 @@ import Text.Printf
 muddle :: IO ()
 muddle = do
   hSetBuffering stdout NoBuffering
-  forkIO (forM_ [1..1000] (\_ -> putChar ' '))
+  forkIO (forM_ [1..1000] (\_ -> putChar 'A'))
   forM_ [1..1000] (\_ -> putChar 'B')
 
 
@@ -35,7 +35,7 @@ reminderMain = loop
     loop = do
       s <- getLine
       if s == "end" then return ()
-        else do setReminder s
+        else do forkIO (setReminder s)
                 loop
 
 
@@ -67,7 +67,7 @@ mvar1 = do
 mvar2 = do
   m <- newEmptyMVar
   forkIO $ do putMVar m 'x'
-              -- putMVar m 'y'
+              putMVar m 'y'
   r <- takeMVar m
   print r
   r <- takeMVar m
@@ -105,7 +105,7 @@ logger (Logger m) = loop
       cmd <- takeMVar m
       case cmd of
         Message msg -> do
-          putStrLn msg
+          putStrLn ("LOG: " ++ msg)
           loop
         Stop s -> do
           putStrLn "Stopping logger"
@@ -149,48 +149,75 @@ loggerMain = do
 ----------------------------------------------------------------------
 -- A server
 
-talk :: Handle -> MVar CountingMsg -> IO ()
-talk h m =
+data CountingMsg = Inc | GetCount (MVar Int)
+
+newtype Counter = MkCounter (MVar CountingMsg)
+
+makeCounter :: IO Counter
+makeCounter = do
+  m <- newEmptyMVar
+  forkIO (loop m (0 :: Int))
+  return (MkCounter m)
+  where
+    loop m c = do
+      cmd <- takeMVar m
+      case cmd of
+        Inc -> do
+          printf "New doubling served! %d doublings so far!\n" (c+1)
+          loop m (c+1)
+        GetCount r -> do
+          putMVar r c
+          loop m c
+
+msgCounter :: Counter -> CountingMsg -> IO ()
+msgCounter (MkCounter m) msg =
+  putMVar m msg
+
+----------------------------------------------------------------------
+-- A Key-Value server
+updateMap :: MVar [(String,Int)] -> String -> Int -> IO ()
+updateMap m k v = do
+  kvs <- takeMVar m
+  putMVar m ((k,v):kvs)
+
+readMap :: MVar [(String,Int)] -> String -> IO (Maybe Int)
+readMap m k = do
+  kvs <- takeMVar m
+  putMVar m kvs
+  return (lookup k kvs)
+
+----------------------------------------------------------------------
+
+talk :: Handle -> Counter -> IO ()
+talk h c =
   do hSetBuffering h LineBuffering
+     hSetNewlineMode h (NewlineMode { inputNL = CRLF, outputNL = CRLF })
      loop
   where
     loop =
       do line <- hGetLine h
          case line of
-           "end" -> hPutStrLn h "Bye!"
+           "end" ->
+             hPutStrLn h "Bye!"
            "count" -> do
              r <- newEmptyMVar
-             putMVar m (GetCount r)
+             c `msgCounter` (GetCount r)
              c <- takeMVar r
              hPutStrLn h ("Count is " ++ show c)
              loop
            line -> do
              hPutStrLn h (show (2 * read line :: Integer))
-             putMVar m Inc
+             c `msgCounter` Inc
              loop
 
-data CountingMsg = Inc | GetCount (MVar Int)
-
-countingThread :: MVar CountingMsg -> IO ()
-countingThread m = loop (0 :: Int)
-  where
-    loop c = do
-      cmd <- takeMVar m
-      case cmd of
-        Inc -> do
-          printf "New doubling served! %d doublings so far!\n" (c+1)
-          loop (c+1)
-        GetCount r -> do
-          putMVar r c
-          loop c
 
 main = do
+  c <- makeCounter
   sock <- listenOn (PortNumber 1234)
-  printf "Listening..."
-  m <- newEmptyMVar
-  forkIO (countingThread m)
+  printf "Listening...\n"
   forever $ do
     (handle, host, port) <- accept sock
-    printf "Accepted connection from %s: %s\n" host (show port)
-    forkFinally (talk handle m) (\_ -> hClose handle)
-
+    printf "Accepted connection (%s:%s)\n" host (show port)
+    forkFinally (talk handle c)
+        (\_ -> do printf "Connection closed (%s:%s)\n" host (show port)
+                  hClose handle)
