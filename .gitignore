@@ -1,1 +1,6 @@
 *~
+*.o
+*.hi
+/lectures/Lec19
+/lectures/Lec19-sudoko
+/lectures/Lec20
