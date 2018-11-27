@@ -110,6 +110,6 @@ There are now many books written about Haskell. Here are links to some that we h
 
 - The [Haskell Wikibook](https://en.wikibooks.org/wiki/Haskell). This is a free online book that starts very gently, but also includes some very advanced material.
 
-- [Parallel and Concurrent Programming in Haskell](http://chimera.labs.oreilly.com/books/1230000000929) by Simon Marlow. This book is an excellent description of the facilities in Haskell for parallel and concurrent programming. We will cover some of these in Lectures 20 and 21. The full text is available online for free reading.
+- [Parallel and Concurrent Programming in Haskell](https://www.oreilly.com/library/view/parallel-and-concurrent/9781449335939/) by Simon Marlow. This book is an excellent description of the facilities in Haskell for parallel and concurrent programming. We will cover some of these in Lectures 19 and 20. The full text is available online for free reading.
 
 - [Learn You a Haskell for Great Good!](http://learnyouahaskell.com/). This is an introductory book on Haskell, covering roughly the same material as this course, but with a different presentation. There are attempts at humour, but you might find them grating after a while. The full text of this book is available online for free.
