@@ -208,7 +208,7 @@ factors n = [ x | x <- [1..n], n `mod` x == 0 ]
    an integer is prime if it is only divisible by 1 and itself: -}
 
 prime :: Int -> Bool
-prime 1 = True
+prime 1 = False
 prime n = factors n == [1,n]
 
 {- (We have to treat 1 separately, because 1 should be considered
